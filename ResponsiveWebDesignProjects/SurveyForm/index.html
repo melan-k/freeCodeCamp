@@ -2,8 +2,127 @@
 <html lang="ja">
   <head>
     <meta charset="utf8">  
+    <title>FCC: Survey Form Clone</title>
+    <style>
+      #main {
+        background-image: url(https://lh3.googleusercontent.com/5TCrYiq-zkCxsEavIk8lrQgkoh5QF6-swHb1r-fk9Fib9wrOwNJqFuJ1eTt2QqTeYFZFIfvkdsxP73tYJQzn0ls_mdOu3kivQeymiuig6-E1SaeVBJK2F8NMvG_YM8DF3YZ89eu16S2blt7IWXxZ6CFWFML6xYZvK5Af7FcIikrBOwYNPxVOGo3akN0zNDJgtUpR7SNIOdx64c5I-1SejcS_omyMTvTELzO1CtGoEz2TK4PL7QirztQvJIdBS2zXNswk5rLbCODhrA4JycegXHEZ0p45KZVPQqL444Y5_YxufVOYbYsr53mWzeythBIzG1h5biY9g0DPCw1c5I4WCr8W8v9d9MXi5Z7WH_GBfB_j066fdyOjwv-wgz2p2luXXSNSwCpJfCXVXY5iumFlqOopqzJmA7BZRU2RC4npNq8Y_H0G7gLm0MyjevoG1bJbBFMgPiBBWsYQKswMtV0X7YZbY8dX0XcEv7118GWA5kzl9XlMKcz9STd2geNL4qXBZpHPksblIKwmKsy4c6HozLqT8LCLcXHdXVVgX-Gcyo9BJMJXWH2-6ekNR1Teqq3HolpZCzedUqeRr1cuhuXqEBOUGVuQP6cmODcMJS3vulrcNUi8KlJyfVy9lJJc4AEEM-Qq-oEIYt1_65DV8OTKZ8IarrimeD2DLmJLQlmZVtABKHW9qD01LA=w1076-h1434-no);
+        background-blend-mode: multiply;
+        background-color: rgb(202, 120, 188);
+        background-size: cover;
+        padding: 40px;
+      }
+      header {
+        text-align: center;
+        color: white;
+      }
+      img {
+        position: absolute;
+      }
+      h1 {
+        margin-bottom: 0px;
+      }
+      header p {
+        margin: 0 0 40px 0;
+      }
+      #survey-form {
+        background-color: white;
+        width: 70%;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 20px;
+      }
+      fieldset {
+        border:none;
+      }
+      input {
+        display: block;
+        width: 100%;
+      }
+      textarea {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        height: 100px;
+      }
+      #comments-section {
+        padding: 10px;
+      }
+      #submit-section input {
+        display: block;
+        width: 100%;
+      }
+    </style>
   </head>
-  <body>
-    
+  <body id="main">
+    <header>
+      <h1>freeCodeCamp Survey Form Clone</h1>
+      <p>Thank you for taking the time to help us improve the platform</p>
+    </header>
+    <form id="survey-form">
+      <fieldset>
+        <div id="name-section">
+          <p>Name</p>
+          <input placeholder="Enter your name">
+        </div>
+        <div id="email-section">
+          <p>Email</p>
+          <input placeholder="Enter your email">
+        </div>
+        <div id="age-section">
+          <p>Age(Optional)</p>
+          <input placeholder="Age">
+        </div>
+        <div id="role-section">
+          <p>Which option best describes your current role?</p>
+          <select id="roles">
+            <option value='' disabled selected>Select current role</option>
+            <option value="Student">Student</option>
+            <option value="FullTimeJob">Full Time Job</option>
+            <option value="FullTimeLearner">Full Time Learner</option>
+            <option value="PreferNotToSay">Prefer not to say</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div id="recommend-section">
+          <p>Would you recommend freeCodeCamp to a friend?</p>
+          <input type="radio" name="definitely" value="definitely" checked>Definitely
+          <input type="radio" name="maybe" value="maybe">Maybe
+          <input type="radio" name="notsure" value="notsure">Not sure
+        </div>
+        <div id="feature-section">
+          <p>What is your favorite feature of freeCodeCamp?</p>
+          <select name="featuer" id="feature">
+            <option value='' disabled selected>Select an option</option>
+            <option value="challenges">Challenges</option>
+            <option value="projects">Projects</option>
+            <option value="community">Community</option>
+            <option value="opensource">Open Source</option>
+          </select>
+        </div>
+        <div id="improve">
+          <p>What would you like to see improved? (Check all that apply)</p>
+          <label for="improve">
+            <input type="checkbox" name="improve" value="frontend" checked>Front-end projects
+            <input type="checkbox" name="improve" value="backend">Back-end projects
+            <input type="checkbox" name="improve" valye="data">Data visualization
+            <input type="checkbox" name="improve" value="challenges">Challenges
+            <input type="checkbox" name="improve" value="opensource">Open Source Community
+            <input type="checkbox" name="improve" value="gitter">Gitter help rooms
+            <input type="checkbox" name="improve" value="videos">Videos
+            <input type="checkbox" name="improve" value="citymeetups">City Meetups
+            <input type="checkbox" name="improve" value="wiki">Wiki
+            <input type="checkbox" name="improve" value="forum">Forum
+            <input type="checkbox" name="improve" value="additional">Additional Courses
+          </label>
+        </div>
+        <div id="comments-section">
+          <p>Any comments or suggestions?</p>
+          <textarea name="comments" id="comments"></textarea>
+        </div>
+        <div id="submit-section">
+          <input type="submit" value="Submit">
+        </div>
+      </fieldset>
+    </form>
   </body>
 </html>>
